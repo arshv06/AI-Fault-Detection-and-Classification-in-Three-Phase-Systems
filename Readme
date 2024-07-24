@@ -1,0 +1,35 @@
+This project aims to develop robust AI algorithms using various
+AI trainers offered by MATLAB. Scaled Conjugate Gradient, is
+utilized as the best option to train and test our ANN on a
+testing data set. The ANN learns from the training dataset and
+utilizes learning patterns to detect and classify faults by
+identifying abnormal voltage and current deviations from
+balanced conditions.
+The training dataset comprises all possible permutations of
+injectable faults in a three-phase power system (eleven in
+total).
+
+A MATLAB Simulink model is designed to create our
+testing and training datasets. It features two three-phase
+power sources: one to supply the voltage and another with a -
+30degree offset to simulate a load. The transmission lines are
+connected to 11 fault injectors with each one consecutively
+injecting a 0.003s long fault at an interval of 0.10s. The scope
+records the Voltage and Current data values for every line
+which is then exported into a spreadsheet format. This file is
+fed into our MATLAB code to develop and train the AI model.
+The discrete sample time was set at 0.003s to keep the
+recorded data points under 5,000 to maximize efficiency and
+minimize overlapping.
+
+Unexpected failures in electrical power transmission lines,
+such as short circuits, can lead to severe economic losses
+and reduce system reliability. Quick identification and
+categorization of these faults are essential for safety.
+Traditional methods rely on human feature extraction and
+prior knowledge. This project develops a three-phase
+simulation model with fault injectors to create datasets for
+training and testing AI algorithms, aiming to improve fault
+detection and classification. Artificial Neural
+networks (ANNs) will be employed to analyze and classify
+fault data with high accuracy
